@@ -31,6 +31,8 @@ public class BlockFixer : MonoBehaviour
             GameObject w = Instantiate(block, new Vector3(block.transform.position.x - (block.transform.localScale.x/2f) + (BLOCK_EDGE_SIZE/2), block.transform.position.y, block.transform.position.z), block.transform.rotation);
             w.transform.localScale = new Vector3(BLOCK_EDGE_SIZE, block.transform.localScale.y-CORNER_TRIM_SIZE, block.transform.localScale.z);
             w.tag = "Side";
-        }        
+        }
+
+        Globals.Instance.GroundObjects = GameObject.FindGameObjectsWithTag("Ground");
     }
 }

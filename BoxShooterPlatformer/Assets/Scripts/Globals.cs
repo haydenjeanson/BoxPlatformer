@@ -14,6 +14,8 @@ public class Globals : MonoBehaviour
     }
     private Rigidbody2D playerRB;
 
+    public GameObject[] GroundObjects { get; set; }
+
     public GameObject[] jumpButtons = new GameObject[1];
     private float[,] jumpButtonBounds = new float[1, 4];
 

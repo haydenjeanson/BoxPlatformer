@@ -10,15 +10,14 @@ public class PlayerScript : MonoBehaviour
     private sbyte direction = 1;
     private Rigidbody2D rb;
     private Collider2D objectCollider;
-    private GameObject[] groundObjects;
+    // private GameObject[] groundObjects;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         objectCollider = GetComponent<BoxCollider2D>();
-
-        groundObjects = GameObject.FindGameObjectsWithTag("Ground");
     }
 
     // Update is called once per frame
@@ -49,14 +48,8 @@ public class PlayerScript : MonoBehaviour
 
     void jump() {
         bool doJump = false;
+        
         if (isTouchingGround()) {
-
-
-
-            // doJump = true; // REMOVE AFTER DONE TESTING
-
-
-
             if (Input.touchCount > 0) {
                 Touch touch = Input.GetTouch(0);
                 if (touch.phase == TouchPhase.Began && !Globals.Instance.isTouchOnShoot(touch)) {
@@ -71,7 +64,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     private bool isTouchingGround() {
-        foreach (GameObject ground in groundObjects) {
+        foreach (GameObject ground in Globals.Instance.GroundObjects) {
             if (objectCollider.IsTouching(ground.GetComponent<BoxCollider2D>())) {
                 return true;
             }
