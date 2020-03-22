@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    public byte speed = 15;
+    public int speed = 950;
     
     public int jumpForce = 35;
     private int maxVerticalSpeed;
@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     void FixedUpdate() {
-        rb.velocity = new Vector2(speed * direction, rb.velocity.y);
+        rb.velocity = new Vector2(speed * direction * Time.deltaTime, rb.velocity.y);
         
         // Stop force from multiplying due to jump spamming
         if (rb.velocity.y > maxVerticalSpeed)
