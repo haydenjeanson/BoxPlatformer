@@ -11,9 +11,7 @@ public class PlayerScript : MonoBehaviour
     public float fallMultiplier = 2.5f;
     private sbyte direction = 1;
     private Rigidbody2D rb;
-    private Collider2D objectCollider;
-    // private GameObject[] groundObjects;
-    
+    private Collider2D objectCollider;    
 
     // Start is called before the first frame update
     void Start()

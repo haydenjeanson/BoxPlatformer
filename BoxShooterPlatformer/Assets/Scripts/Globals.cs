@@ -47,11 +47,7 @@ public class Globals : MonoBehaviour
             jumpButtonBounds[i, 3] = left;
         }
     }
-
-    void Update() {
-
-    }
-
+    
     // Returns direction the player is currently moving. +1 = right, -1 = left
     public int PlayerDirection
     {

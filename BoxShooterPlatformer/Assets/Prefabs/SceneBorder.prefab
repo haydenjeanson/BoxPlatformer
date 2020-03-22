@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4649406991835309711}
   m_Layer: 0
   m_Name: bottom
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4649406992694375143}
   m_Layer: 0
   m_Name: SideR
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4649406992716125201}
   m_Layer: 0
   m_Name: bottom (1)
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4649406993477494141}
   m_Layer: 0
   m_Name: SideL
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

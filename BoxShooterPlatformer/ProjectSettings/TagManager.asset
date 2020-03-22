@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Side
-  - Ground
   - Bullet
   - JumpButton
-  - Ceiling
-  - Block
   layers:
   - Default
   - TransparentFX
