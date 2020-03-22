@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &187444999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7644073449641629596, guid: bd891d4a377923e46bfef913559b079c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567896218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499075757
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +372,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd891d4a377923e46bfef913559b079c, type: 3}
+--- !u!1 &1847694767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1847694769}
+  - component: {fileID: 1847694768}
+  m_Layer: 0
+  m_Name: Globals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1847694768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847694767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0751f6c84a071b04b96a19ec40e4f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpButtons:
+  - {fileID: 187444999}
+  PLAYER_LAYER: 9
+--- !u!4 &1847694769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847694767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29258156, y: -0.051328406, z: -133.11812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1858451775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -373,6 +425,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2089688457977414507, guid: 3789e38349982a345a89991bd88a8fe3,
+        type: 3}
+      propertyPath: jumpForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2089688457977414513, guid: 3789e38349982a345a89991bd88a8fe3,
         type: 3}
       propertyPath: m_Name
@@ -386,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 2089688457977414517, guid: 3789e38349982a345a89991bd88a8fe3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.117391
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 2089688457977414517, guid: 3789e38349982a345a89991bd88a8fe3,
         type: 3}
@@ -435,3 +492,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3789e38349982a345a89991bd88a8fe3, type: 3}
+--- !u!1 &1861090047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861090048}
+  - component: {fileID: 1861090049}
+  m_Layer: 0
+  m_Name: BlockFixer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861090048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861090047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29258156, y: -0.051328406, z: -133.11812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861090049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861090047}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd78ae68c50ed954e8bac458e5eabff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

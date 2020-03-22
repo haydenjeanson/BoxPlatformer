@@ -19,6 +19,8 @@ public class Globals : MonoBehaviour
     public GameObject[] jumpButtons = new GameObject[1];
     private float[,] jumpButtonBounds = new float[1, 4];
 
+    public int PLAYER_LAYER = 9;
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;

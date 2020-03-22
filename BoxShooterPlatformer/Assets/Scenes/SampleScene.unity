@@ -639,7 +639,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897943253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd78ae68c50ed954e8bac458e5eabff0, type: 3}
   m_Name: 
@@ -1192,6 +1192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpButtons:
   - {fileID: 2072179935}
+  PLAYER_LAYER: 9
 --- !u!4 &1602487435
 Transform:
   m_ObjectHideFlags: 0
@@ -1540,7 +1541,7 @@ PrefabInstance:
     - target: {fileID: 2089688457977414507, guid: 3789e38349982a345a89991bd88a8fe3,
         type: 3}
       propertyPath: jumpForce
-      value: 2500
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2089688457977414507, guid: 3789e38349982a345a89991bd88a8fe3,
         type: 3}
