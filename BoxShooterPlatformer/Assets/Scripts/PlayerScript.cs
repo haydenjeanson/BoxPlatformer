@@ -50,7 +50,6 @@ public class PlayerScript : MonoBehaviour
     }
 
     void OnCollisionStay2D (Collision2D other) {
-        Debug.Log(other.GetContact(0).normal.y);
         if (other.GetContact(0).normal.y > 0)
             canJump = true; 
     }

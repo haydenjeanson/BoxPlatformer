@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - JumpButton
+  - Block
   layers:
   - Default
   - TransparentFX
