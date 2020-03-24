@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5970787612834512801}
   - component: {fileID: 205350768582951690}
   - component: {fileID: 3327410984753321082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: JumpButtonR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 350639761187500038}
   - component: {fileID: 775061285391264338}
   - component: {fileID: 1989413176911640203}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: JumpButtonL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

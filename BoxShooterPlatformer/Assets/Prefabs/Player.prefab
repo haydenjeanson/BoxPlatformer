@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 2089688457977414506}
   - component: {fileID: 2089688457977414518}
   - component: {fileID: 2089688457977414507}
-  - component: {fileID: 713557302}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -177,21 +176,6 @@ MonoBehaviour:
   speed: 950
   jumpForce: 35
   fallMultiplier: 2.5
---- !u!114 &713557302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089688457977414513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6280d9670e88514599c80b693c37165, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet_Emitter: {fileID: 1037884560}
-  Bullet: {fileID: 8288438602507963044, guid: 11904dcff8ad7804c9b9218e6e338038, type: 3}
-  Bullet_Forward_Force: 2000
 --- !u!1 &3155791958214944252
 GameObject:
   m_ObjectHideFlags: 0

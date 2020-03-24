@@ -46,12 +46,15 @@ public class PlayerScript : MonoBehaviour
             canJump = true; 
         
         if (other.gameObject.tag == "Finish")
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 
     void OnCollisionStay2D (Collision2D other) {
-        if (other.GetContact(0).normal.y > 0)
-            canJump = true; 
+        if (other.GetContact(0).normal.y > 0) {
+            canJump = true;
+        } else if (other.GetContact(0).normal.x != 0) {
+            // direction *= -1;
+        }
     }
 
     void OnCollisionExit2D(Collision2D other) {
