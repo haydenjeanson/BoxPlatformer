@@ -3,17 +3,31 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
+    public input controls;
+
     public int speed = 950;
     
     public int jumpForce = 35;
     private int maxVerticalSpeed;
-    private bool canJump = false;
+    private bool doJump = false;
     public float fallMultiplier = 2.5f;
     private sbyte direction = 1;
     private Rigidbody2D rb;
-    private Collider2D objectCollider;    
+    private BoxCollider2D objectCollider;  
 
-    // Start is called before the first frame update
+    void Awake() {
+        controls = new input();
+        controls.Player.Jump.performed += _ => jump();
+    }
+
+    private void OnEnable() {
+        controls.Enable();
+    }
+
+    private void OnDisable() {
+        controls.Disable();
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,12 +38,15 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jump();
+        // jump();
+        // Debug.Log(isGrounded());
     }
 
     void FixedUpdate() {
         rb.velocity = new Vector2(speed * direction * Time.deltaTime, rb.velocity.y);
         
+        if (doJump) { rb.velocity = transform.up * jumpForce; doJump = false; }
+
         // Stop force from multiplying due to jump spamming
         if (rb.velocity.y > maxVerticalSpeed)
             rb.velocity = new Vector2(rb.velocity.x, maxVerticalSpeed);
@@ -41,40 +58,21 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionEnter2D (Collision2D other) {
         if (other.GetContact(0).normal.x != 0)
             direction *= -1;
-
-        if (other.GetContact(0).normal.y > 0)
-            canJump = true; 
         
         if (other.gameObject.tag == "Finish")
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 
-    void OnCollisionStay2D (Collision2D other) {
-        if (other.GetContact(0).normal.y > 0) {
-            canJump = true;
-        } else if (other.GetContact(0).normal.x != 0) {
-            // direction *= -1;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D other) {
-        canJump = false;
-    }
-
     void jump() {
-        bool doJump = false;
-        
-        if (canJump) {
-            if (Input.touchCount > 0) {
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Began && !Globals.Instance.isTouchOnShoot(touch)) {
-                    doJump = true;
-                }
-            } else if (Input.GetKeyDown("space")) {
-                doJump = true;
-            }
-        }
+        doJump = false;
 
-        if (doJump) { rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse); }
+        if (isGrounded()) {
+            doJump = true;
+        }
+    }
+
+    private bool isGrounded() {
+        RaycastHit2D hit = Physics2D.BoxCast(objectCollider.bounds.center, objectCollider.bounds.size, 0f, Vector2.down, objectCollider.bounds.extents.y, LayerMask.GetMask("Platform"));
+        return hit.collider != null;
     }
 }

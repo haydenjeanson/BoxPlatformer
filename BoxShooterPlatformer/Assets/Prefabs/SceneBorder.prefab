@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5970787612834512801}
   - component: {fileID: 205350768582951690}
   - component: {fileID: 3327410984753321082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JumpButtonR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7018853897423956882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SceneBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4649406991835309709}
   - component: {fileID: 4649406991835309708}
   - component: {fileID: 4649406991835309711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 4649406992694375141}
   - component: {fileID: 4649406992694375140}
   - component: {fileID: 4649406992694375143}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SideR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 4649406992716125295}
   - component: {fileID: 4649406992716125294}
   - component: {fileID: 4649406992716125201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bottom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 4649406993477494139}
   - component: {fileID: 4649406993477494138}
   - component: {fileID: 4649406993477494141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SideL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 350639761187500038}
   - component: {fileID: 775061285391264338}
   - component: {fileID: 1989413176911640203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JumpButtonL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
